@@ -62,7 +62,8 @@ public class myArrayListExample {
     // How to get some values
     System.out.println("The first value is: " + myArrayList.get(0));
 
-    // How to remove stuff
+    // How to remove stuff (note that in this case the lenght of the ArrayList
+    // changes it's "Dynamic")
     myArrayList.remove(1);
     System.out
         .println("We removed one value and now we have: " + myArrayList.size() + " as the lenght of the ArrayList");
