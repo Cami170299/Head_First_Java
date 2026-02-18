@@ -31,7 +31,6 @@ public class Startup {
         result = "hit";
       }
     }
-
     // Print the current status
     return result;
   }
