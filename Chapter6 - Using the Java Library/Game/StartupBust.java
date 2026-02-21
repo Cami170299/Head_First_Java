@@ -73,7 +73,7 @@ public class StartupBust {
 
   private void startPlaying() {
     while (!startups.isEmpty()) {
-      String userGuess = helper.getUserInput("Enter a Guess");
+      String userGuess = helper.userInput("Enter a Guess");
       CheckUserGuess(userGuess);
     }
     finishkGame();
