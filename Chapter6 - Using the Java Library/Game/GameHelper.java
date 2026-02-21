@@ -1,7 +1,4 @@
 import java.util.Scanner;
-
-import javax.swing.text.StyledEditorKit.BoldAction;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -21,20 +18,12 @@ public class GameHelper {
   private final Random random = new Random();
   private int startupCount = 0;
 
-  public String UserInput(String prompt) {
+  public String userInput(String prompt) {
     System.out.println(prompt + ": ");
     Scanner in = new Scanner(System.in);
     String userReply = in.nextLine().toLowerCase();
     in.close();
     return userReply;
-  }
-
-  private int getIncrement() {
-    if (startupCount % 2 == 0) {
-      return HORIZONTAL_INCREMENT;
-    } else {
-      return VERTICAL_INCREMENT;
-    }
   }
 
   // We will keep the User input fimction for the guesses as is.
@@ -110,4 +99,11 @@ public class GameHelper {
     return index / GRID_LENGTH;
   }
 
+  private int getIncrement() {
+    if (startupCount % 2 == 0) {
+      return HORIZONTAL_INCREMENT;
+    } else {
+      return VERTICAL_INCREMENT;
+    }
+  }
 }
