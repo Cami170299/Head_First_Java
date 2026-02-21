@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-import jdk.internal.org.jline.terminal.impl.jna.linux.CLibrary.winsize;
+import javax.swing.text.StyledEditorKit.BoldAction;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,6 +29,14 @@ public class GameHelper {
     return userReply;
   }
 
+  private int getIncrement() {
+    if (startupCount % 2 == 0) {
+      return HORIZONTAL_INCREMENT;
+    } else {
+      return VERTICAL_INCREMENT;
+    }
+  }
+
   // We will keep the User input fimction for the guesses as is.
   public ArrayList<String> placeStartup(int startupSize) {
     int[] startupCoords = new int[startupSize];
@@ -52,9 +60,54 @@ public class GameHelper {
       }
     }
     savePositionToGrid(startupCoords);
-    ArrayList<String> alphaCells = convertCoordsToAlphaFormat(startupCoords):
+    ArrayList<String> alphaCells = convertCoordsToAlphaFormat(startupCoords);
     System.out.println("Placed at: " + alphaCells);
     return alphaCells;
+  }
+
+  private boolean startupFits(int[] startupCoords, int increment) {
+    int finalLocation = startupCoords[startupCoords.length - 1];
+    if (increment == HORIZONTAL_INCREMENT) {
+      // Check end is on the same row as the start
+      return calcRowFromIndex(startupCoords[0]) == calcRowFromIndex(finalLocation);
+    } else {
+      return finalLocation < GRID_SIZE;
+    }
+  }
+
+  private boolean coordsAvailable(int[] startupCoords) {
+    for (int coord : startupCoords) {
+      if (grid[coord] != 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  private void savePositionToGrid(int[] startupCoords) {
+    for (int index : startupCoords) {
+      grid[index] = 1;
+    }
+  }
+
+  private ArrayList<String> convertCoordsToAlphaFormat(int[] startupCoords) {
+    ArrayList<String> alphaCells = new ArrayList<String>();
+    for (int index : startupCoords) {
+      String alphaCoords = getAlphaCoordsFromIndex(index);
+      alphaCells.add(alphaCoords);
+    }
+    return alphaCells;
+  }
+
+  private String getAlphaCoordsFromIndex(int index) {
+    int row = calcRowFromIndex(index);
+    int column = index % GRID_LENGTH;
+    String letter = ALPHABET.substring(column + 1);
+    return letter + row;
+  }
+
+  private int calcRowFromIndex(int index) {
+    return index / GRID_LENGTH;
   }
 
 }
