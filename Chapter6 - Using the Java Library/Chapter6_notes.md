@@ -1,4 +1,3 @@
-
 # The Java API Library
 
 Inside the Java API all classes are grouped into packages. This with the purpose of dividing them by functionality; GUI, data, Structures, Data-Bases, etc...
@@ -7,7 +6,7 @@ Inside the Java API all classes are grouped into packages. This with the purpose
 
 - Packages are also a way to avoid class collisions, by maybe having a class with the same name but different package.
 
-Example of a package
+### <p align="center"> Example of a package </p>
 
 ### java.util.ArrayList
 
@@ -24,7 +23,4 @@ So within the <b>java.util</b> package we are using the <b>ArrayList</b> class.
 
 NOTE: an ArrayList resizes itself dynamically
 
-
-
-
-
+Due that everything in Java is a package, the most commonly used classes (String, System, etc...) fall under the pre- imported <b>java.lang</b> package.
