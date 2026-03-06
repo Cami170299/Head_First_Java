@@ -33,7 +33,7 @@ There are only 4 access levels that a "super class" can look at, to either allow
 
 ### Q&A
 
-- # What if i just want to add more information to an inherited method ?
+1. #### What if i just want to add more information to an inherited method ?
 
 You can add the <b>"super"</b> prefix to the method and play with it, for Ex;
 
@@ -44,6 +44,29 @@ You can add the <b>"super"</b> prefix to the method and play with it, for Ex;
   }
 </code>
 
+2. #### What is the use of Polymorphism ?
 
+When you use Polymorphism you can use any subclass that extends the superclass as the new object in the assignation for a superclass reference declaration.
+
+<code>
+  Animal myAnimal = new Dog();
+    // This is done because Dog "extends" Animal superclass.
+</code>
+
+You can use this property not only for assignation for also for arguments and returns.
+
+<code>
+  public void pet(Animal a){
+    a.makeNoise();
+  }
+
+  public void myAction(){
+    Dog dog = new Dog;
+
+    pet(dog);
+  }
+</code>
+
+This will also allow you to set a <b>Protocol</b> to objects, saying that this type does certain set of things and uses certain set of instance variables to operate.
 
 
