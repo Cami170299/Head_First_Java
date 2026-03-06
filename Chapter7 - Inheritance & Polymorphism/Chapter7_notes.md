@@ -67,6 +67,6 @@ You can use this property not only for assignation for also for arguments and re
   }
 ```
 
-This will also allow you to set a <b>Protocol</b> to objects, saying that this type does certain set of things and uses certain set of instance variables to operate.
+This will also allow you to set a <b>"Protocol"</b> to objects, saying that this type does certain set of things and uses certain set of instance variables to operate.
 
 
