@@ -37,7 +37,7 @@ There are only 4 access levels that a "super class" can look at, to either allow
 
 You can add the <b>"super"</b> prefix to the method and play with it, for Ex;
 
-```
+``` Java
   @overider
   public void roam(){
     super.roam(); // calling the parent method and adding more functionality after.
@@ -47,16 +47,16 @@ You can add the <b>"super"</b> prefix to the method and play with it, for Ex;
 
 2. #### What is the use of Polymorphism ?
 
-When you use Polymorphism you can use any subclass that extends the superclass as the new object in the assignation for a superclass reference declaration.
+When you use Polymorphism any subclass that extends the superclass can be used as the new object in the assignation for a superclass reference declaration.
 
-```
+``` Java
   Animal myAnimal = new Dog();
     // This is done because Dog "extends" Animal superclass.
 ```
 
-You can use this property not only for assignation for also for arguments and returns.
+You can use this property not only for assignation but also for arguments and returns.
 
-```
+``` Java
   public void pet(Animal a){
     a.makeNoise();
   }
@@ -68,6 +68,4 @@ You can use this property not only for assignation for also for arguments and re
   }
 ```
 
-This will also allow you to set a <b>"Protocol"</b> to objects, saying that this type does certain set of things and uses certain set of instance variables to operate.
-
-
+This will also allow you to set a <b>"Protocol"</b> to objects, meaning every "thing" (Object) does certain set of things and uses certain set of instance variables to operate.
