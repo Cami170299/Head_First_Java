@@ -6,8 +6,12 @@
 
 ### Types of Polymorphism
 
-1. Compile-type Polymorphism
-2. Runtime Polymorphism
+- In the Java programming language there is only tow main types of Polymorphism.
+
+1. Compile-time Polymorphism (Overloading)
+ - The decision is made after compiling the code.
+2. Runtime Polymorphism (Overriding)
+ - The decision is made while running the code.
 
 ## What is Inheritance
 
