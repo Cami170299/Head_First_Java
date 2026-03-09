@@ -1,6 +1,6 @@
 public class Zoo {
   // Gethering the Animals
-  public static Animal[] myAnimals = new Animal[1];
+  public static Animal[] myAnimals = new Animal[2];
 
   public static void main(String[] args) {
 
