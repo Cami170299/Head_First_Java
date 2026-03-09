@@ -1,6 +1,11 @@
 public class Animal {
 
+  // INSTACE VARIABLES
+
   private String name;
+  public double age;
+
+  // ENCAPSULATIONS
 
   public void setName(String inputName) {
     name = inputName;
@@ -8,6 +13,12 @@ public class Animal {
 
   public void getName() {
     System.out.println(name);
+  }
+
+  // METHODS
+
+  public void makeSound() {
+    System.out.println("Making random sound...");
   }
 
   public void roam() {
@@ -18,34 +29,14 @@ public class Animal {
     System.out.print("Eating something...");
   }
 
-  public void makeSound() {
-    System.out.println("Making random sound");
+  // CONSTRUCTORS
+
+  public Animal(String animalName, double animalAgeInHumanYears) {
+    this.setName(animalName);
+    this.age = animalAgeInHumanYears;
   }
 
-  public static void main(String[] args) {
-
-    Animal[] myPets = new Animal[2];
-
-    myPets[0] = new Dog();
-    myPets[1] = new Cat();
-
-    myPets[0].name = "Jack";
-    myPets[1].name = "Queso";
-
-    for (Animal thePet : myPets) {
-      thePet.getName();
-      thePet.makeSound();
-    }
-
-  }
-}
-
-class Dog extends Animal {
-  @Override
-  public void makeSound() {
-    System.out.println("Wouff Wouff");
-  }
-}
-
-class Cat extends Animal {
+  public Animal() {
+    // Empty contructor
+  };
 }
