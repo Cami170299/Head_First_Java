@@ -33,9 +33,9 @@ public class processor {
 For run time is only resolve when you run the class, for example a child class with the same method name as the super class.
 
 ```Java
-public class suprocess extends processor {
+public class subpricess extends processor {
   @Override
-  public void processor(){
+  public void process(){
     // Do something
   }
 }
