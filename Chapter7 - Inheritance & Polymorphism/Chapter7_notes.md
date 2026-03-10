@@ -10,8 +10,36 @@
 
 1. Compile-time Polymorphism (Overloading)
     - The decision is made after compiling the code.
+
+A clearer way to understand it is that Overloading refers to the number of methods that have the same name but different parameters;
+
+```Java 
+public class processor {
+  public void process (int i){
+    // Do something
+  }
+  public void process (int[] i){
+    // Do something
+  }
+  public void process (int i, float a){
+    // Do something
+  }
+}
+```
+
 2. Runtime Polymorphism (Overriding)
     - The decision is made while running the code.
+
+For run time is only resolve when you run the class, for example a child class with the same method name as the super class.
+
+```Java
+public class suprocess extends processor {
+  @Override
+  public void processor(){
+    // Do something
+  }
+}
+```
 
 ## What is Inheritance
 
