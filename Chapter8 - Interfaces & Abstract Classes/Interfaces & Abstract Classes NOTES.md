@@ -12,7 +12,7 @@ abstract class Canine extends Animal {
 }
 ```
 
-In this example the "abstract" makes the compiler guarantee that in no situation there will be a "new" instance (a.k.a Object) of that class. <b>BUT</b> you can still use it as a reference type.
+In this example the "abstract" makes the compiler guarantee that in no situation there will be a "new" instance (a.k.a Object) of that class. <b>BUT</b> you can still use it as a reference type or extension for a sub-class.
 
 - <b>One important thing to have in mind is that you can also use "abstract" with methods !!</b>
 
@@ -20,13 +20,11 @@ This means that if you "abstract" a method the method in question must be overri
 
 ```Java
 abstract class Animal {
-  // we leave only the declaration NO BODY for this method
+  // we leave only the declaration NO {} BODY for the method
   public abstract void eat();
 }
 ```
 
 <b>NOTE:</b>If you declare a method as "abstract" the class MUST be "abstract" as well, as you cannot have an abstract method inside of a non-abstract class.
-
-
 
 
