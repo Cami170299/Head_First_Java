@@ -59,11 +59,13 @@ Depending how you view it, Java can support different types of Polymorphism.
 There are only 4 access levels that a "super class" can look at, to either allow or deny the access to a its <b>instance variables</b> or <b>methods</b>.
 
 - private
-  - All <b>private</b> methods, instance variables, etc... Are NOT inherited.
+  - All <b>private</b> methods, instance variables, etc... Are NOT inherited and cannot be accessed outside the class itself, only with getters or setters.
 - default
+  - Are when you do not set anything for the declaration, these are only accessible to the same package.
 - protected
+  - They are inheritable and can be access by a subclass of a different package.
 - public
-  - All <b>public</b> methods, instance variables, etc... Are inherited.
+  - All <b>public</b> methods, instance variables, etc... Are inherited and accessible everywhere.
 
 ### Q&A
 
@@ -87,6 +89,8 @@ When you use Polymorphism any subclass that extends the superclass can be used a
   Animal myAnimal = new Dog();
     // This is done because Dog "extends" Animal superclass.
 ```
+
+NOTE: cautions here when you assign a new class with its parent super class, you will be able to control only the objects of that super class not the ones from the new subclass.
 
 You can use this property not only for assignation but also for arguments and returns.
 
