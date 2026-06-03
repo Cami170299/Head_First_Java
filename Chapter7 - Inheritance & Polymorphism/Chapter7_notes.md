@@ -8,50 +8,40 @@ The ability of a single interface or symbol to represent or operate on different
 
 Depending how you view it, Java can support different types of Polymorphism.
 
-1. <b style="color:red;">Practical stand point</b> (only 2 based on execution time)
+1. <b>Practical stand point</b> (only 2 based on execution time)
 
-- **Overloading**: This type happens when the compiler binds the methods with their name and definitions. So in basically we set the same "name" for all the methods but we change the parameters. (This as you imagine happens at **Compiling Time**)
+    - **Overloading**: This type happens when the compiler binds the methods with their name and definitions. So in basically we set the same "name" for all the methods but we change the parameters. (This as you imagine happens at **Compiling Time**)
 
-- **Overriding**: This happens when a overridden method is resolved dynamically at the run time rather than when the source code is compiled. Basically a subclass providing its own implementation of a method declared in its parent class
+      ``` Java
+      public class processor {
+        public void process (int i){
+          // Do something
+        }
+        public void process (int[] i){
+          // Do something
+        }
+        public void process (int i, float a){
+          // Do something
+        }
+      }
+      ```
 
-2. <b style="color:red;">Theoretical stand point</b> (only 3 based on CS categories)
+    - **Overriding**: This happens when a overridden method is resolved dynamically at the run time rather than when the source code is compiled. Basically a subclass providing its own implementation of a method declared in its parent class. (**Happens at processing time**)
 
-- **Ad-hoc**: which is basically Overloading.
-- **Sub type**: which is basically Overriding.
-- **Parametric**: The execution of code identically across a variety of types without relying on specific type information. Ex. "**List<TypeA> or List<TypeB>**"
+      ```Java
+      public class subpricess extends processor {
+        @Override
+        public void process(){
+          // Do something
+        }
+      }
+      ```
 
-1. Compile-time Polymorphism (Overloading)
-    - The decision is made after compiling the code.
+2. <b>Theoretical stand point</b> (only 3 based on CS categories)
 
-A clearer way to understand it is that Overloading refers to the number of methods that have the same name but different parameters;
-
-```Java 
-public class processor {
-  public void process (int i){
-    // Do something
-  }
-  public void process (int[] i){
-    // Do something
-  }
-  public void process (int i, float a){
-    // Do something
-  }
-}
-```
-
-2. Runtime Polymorphism (Overriding)
-    - The decision is made while running the code.
-
-For run time is only resolve when you run the class, for example a child class with the same method name as the super class.
-
-```Java
-public class subpricess extends processor {
-  @Override
-  public void process(){
-    // Do something
-  }
-}
-```
+    - **Ad-hoc**: which is basically Overloading.
+    - **Sub type**: which is basically Overriding.
+    - **Parametric**: The execution of code identically across a variety of types without relying on specific type information. Ex. "**List<TypeA> or List<TypeB>**"
 
 ## What is Inheritance
 
