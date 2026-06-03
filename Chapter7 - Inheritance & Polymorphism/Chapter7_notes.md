@@ -2,11 +2,23 @@
 
 ## What is Polymorphism
 
-- The ability of a single interface or symbol to represent or operate on different underlying data types.
+The ability of a single interface or symbol to represent or operate on different underlying data types.
 
 ### Types of Polymorphism
 
-- In the Java programming language there is only tow main types of Polymorphism.
+Depending how you view it, Java can support different types of Polymorphism.
+
+1. <b style="color:red;">Practical stand point</b> (only 2 based on execution time)
+
+- **Overloading**: This type happens when the compiler binds the methods with their name and definitions. So in basically we set the same "name" for all the methods but we change the parameters. (This as you imagine happens at **Compiling Time**)
+
+- **Overriding**: This happens when a overridden method is resolved dynamically at the run time rather than when the source code is compiled. Basically a subclass providing its own implementation of a method declared in its parent class
+
+2. <b style="color:red;">Theoretical stand point</b> (only 3 based on CS categories)
+
+- **Ad-hoc**: which is basically Overloading.
+- **Sub type**: which is basically Overriding.
+- **Parametric**: The execution of code identically across a variety of types without relying on specific type information. Ex. "**List<TypeA> or List<TypeB>**"
 
 1. Compile-time Polymorphism (Overloading)
     - The decision is made after compiling the code.
