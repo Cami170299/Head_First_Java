@@ -2,8 +2,6 @@
 
 import java.util.ArrayList;
 
-import com.sun.net.httpserver.Authenticator.Retry;
-
 public class TheObjectClass {
   public static void main(String[] args) {
     AnyObject o1 = new AnyObject();
@@ -25,7 +23,7 @@ public class TheObjectClass {
 
 class Animal {
   public void exists() {
-    //
+    // existing
   }
 }
 
@@ -64,14 +62,16 @@ class Dog extends Canine implements Pet {
 
 class AnyObject {
   public void createAnimalList() {
-    // This is a random created class of whatever
+    // Creating a ArrayList of type ANIMAL
     ArrayList<Animal> myAnimals = new ArrayList<Animal>();
 
+    // This is a Dog which reference variable is declared as type Dog as well
     Dog scooby = new Dog();
-    // For Clifford the reference vaeriable is Animal which automatically allows
-    // this variable to only call what an "Animal" class can do not a Dog, even tho
-    // the object is a Dog.
+
+    // For Clifford the reference variable is "Animal"
     Animal clifford = new Dog();
+    // This means that clifford is only able to do what an "Animal" class can do.
+    // And NOT what a Dog class can do (even tho the object is a Dog)
 
     myAnimals.add(scooby);
     myAnimals.add(clifford);

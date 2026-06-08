@@ -20,7 +20,7 @@ In this example the "**abstract**" keyword makes the compiler guarantee that in 
 
 - <b>NOTE:You can also use the "abstract" keyword with methods !!</b>
 
-## Use cases
+### Use cases
 
 Abstract classes are useful when you cannot create a general purpose (specific enough) code that will work for ALL possible future class's implementation for that method. So you make it a requirement, a protocol. If your class is called the method in question must be overridden.
 
@@ -33,4 +33,36 @@ abstract class Animal {
 
 <b>NOTE:</b>If you declare even ONE method as "abstract" the class MUST be "abstract" as well, as you cannot have an abstract method inside of a non-abstract class.
 
+## Reference variable type and assignation
 
+It is really important that when we create an object we look closely what we are assigning to it, in Java you can declare the Object's **super-class** as the reference value type. 
+
+For example.
+
+Say we have this super class called **Feline**;
+
+```Java
+public class Feline{
+  void drink(String liquid){
+    if (liquid != ""){
+      System.out.println("Dringking " + liquid);
+    } else {
+      System.out.println("Drinking");
+    }
+  }
+}
+```
+
+And now we have this class called **Cat** which extends the **Feline** class;
+
+```Java
+public class cat{
+  void eat(String solid) {
+    if (solid != "") {
+      System.out.println("Eating " + solid);
+    } else {
+      System.out.println("Eating something.");
+    }
+  }
+}
+```
