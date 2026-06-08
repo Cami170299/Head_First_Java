@@ -4,7 +4,7 @@ To understand what really an interface does and how it behaves we need to unders
 
 ## Abstract Classes
 
-In short an **abstract** class is type of class that cannot be instantiated. They do no have enough definition to become an object, so by this definition there are two types of classes "**abstract**" and "**concrete**". So one can be instantiated and the other one not.
+In short an **abstract** class is type of class that cannot be instantiated because they do not count with enough definition to become an object, so if we follow this logic there must be two types of classes 1."**abstract**" and 2."**concrete**". One is instantiable the other one isn't.
 
 Ex.
 
@@ -16,11 +16,13 @@ abstract class Canine extends Animal {
 }
 ```
 
-In this example the "**abstract**" keyword makes the compiler guarantee that in no situation there will be a "new" instance (a.k.a Object) of that class.
+In this example the "**abstract**" keyword makes the compiler guarantee that in no situation there will be a new **instance** (a.k.a new Object) of that class.
 
-- <b>You can also use the "abstract" keyword with methods !!</b>
+- <b>NOTE:You can also use the "abstract" keyword with methods !!</b>
 
-This is mostly useful when you cannot create a general purpose (specific enough) code that will work for any possible future class's implementation for that method, so you make it a requirement, a protocol. If your class is called the method in question must be overridden.
+## Use cases
+
+Abstract classes are useful when you cannot create a general purpose (specific enough) code that will work for ALL possible future class's implementation for that method. So you make it a requirement, a protocol. If your class is called the method in question must be overridden.
 
 ```Java
 abstract class Animal {
@@ -29,6 +31,6 @@ abstract class Animal {
 }
 ```
 
-<b>NOTE:</b>If you declare a method as "abstract" the class MUST be "abstract" as well, as you cannot have an abstract method inside of a non-abstract class.
+<b>NOTE:</b>If you declare even ONE method as "abstract" the class MUST be "abstract" as well, as you cannot have an abstract method inside of a non-abstract class.
 
 
