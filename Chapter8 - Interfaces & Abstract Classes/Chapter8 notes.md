@@ -88,4 +88,10 @@ myCat.eat();
 
 This is because we assigned Feline as the reference value for the Cat. So we can only control what a Feline does NOT what a Cat does.
 
+**NOTE:** You can use this property not only for assignation but also for parameters and returns;
 
+``` Java
+  public void pet(Animal a){
+    a.makeNoise();
+  }
+```

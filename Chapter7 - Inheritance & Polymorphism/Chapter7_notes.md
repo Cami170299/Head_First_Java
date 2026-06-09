@@ -83,27 +83,4 @@ You can add the <b>"super"</b> prefix to the method and play with it, for Ex;
 
 2. #### What is the use of Polymorphism ?
 
-When you use Polymorphism any subclass that extends the superclass can be used as the new object in the assignation for a superclass reference declaration.
-
-``` Java
-  Animal myAnimal = new Dog();
-    // This is done because Dog "extends" Animal superclass.
-```
-
-NOTE: cautions here when you assign a new class with its parent super class, you will be able to control only the objects of that super class not the ones from the new subclass.
-
-You can use this property not only for assignation but also for arguments and returns.
-
-``` Java
-  public void pet(Animal a){
-    a.makeNoise();
-  }
-
-  public void myAction(){
-    Dog dog = new Dog;
-
-    pet(dog);
-  }
-```
-
-This will also allow you to set a <b>"Protocol"</b> to objects, meaning every "thing" (Object) does certain set of things and uses certain set of instance variables to operate.
+The main advantage of Polymorphism is to structure guidelines or <b>"Protocols"</b> to objects, meaning every "thing" (Object) does a certain set of actions and uses certain set of instance variables to operate.
