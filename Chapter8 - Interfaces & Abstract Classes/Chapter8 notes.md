@@ -56,7 +56,7 @@ public class Feline{
 And now we have this class called **Cat** which extends the **Feline** class;
 
 ```Java
-public class cat{
+public class Cat extends Feline{
   void eat(String solid) {
     if (solid != "") {
       System.out.println("Eating " + solid);
@@ -66,3 +66,26 @@ public class cat{
   }
 }
 ```
+
+If we create a new **Cat** object on main and we assign a reference variable type **Feline** to it as follows;
+
+```Java
+public class MyClass{
+  public static void main(String[] args){
+    Feline myCat = new Cat();
+  }
+}
+```
+
+**This will COMPILE**
+
+- But why ?
+Because the class **Cat** is extending the "super-class" **Feline**, therefore Cat is just a sub set of Feline (a child of feline). BUT what we CANNOT do is call the Cat's methods we are only able to call the Feline methods instead, foe example this following snipped will not compile.
+
+```Java
+myCat.eat();
+```
+
+This is because we assigned Feline as the reference value for the Cat. So we can only control what a Feline does NOT what a Cat does.
+
+
