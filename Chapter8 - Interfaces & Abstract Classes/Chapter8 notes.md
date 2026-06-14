@@ -10,15 +10,14 @@ Ex.
 
 ```Java
 abstract class Canine extends Animal {
-  public void roam(){
+  abstract public void roam();
     // do something
-  }
 }
 ```
 
 In this example the "**abstract**" keyword makes the compiler guarantee that in no situation there will be a new **instance** (a.k.a new Object) of that class.
 
-- <b>NOTE:You can also use the "abstract" keyword with methods !!</b>
+- <b>NOTE: You can also use the "abstract" keyword with methods !!</b>
 
 ### Use cases
 
@@ -27,11 +26,11 @@ Abstract classes are useful when you cannot create a general purpose (specific e
 ```Java
 abstract class Animal {
   // we leave only the declaration NO {} BODY for the method
-  public abstract void eat();
+  abstract public void eat();
 }
 ```
 
-<b>NOTE:</b>If you declare even ONE method as "abstract" the class MUST be "abstract" as well, as you cannot have an abstract method inside of a non-abstract class.
+<b>NOTE:</b> If you declare even ONE method as "abstract" the class MUST be "abstract" as well, as you cannot have an abstract method inside of a non-abstract class.
 
 ## Reference variable type and assignation
 
@@ -67,7 +66,7 @@ public class Cat extends Feline{
 }
 ```
 
-If we create a new **Cat** object on main and we assign a reference variable type **Feline** to it as follows;
+If we create a new **Cat** object on main we can technically assign **Feline** as the reference variable type to **Cat**.
 
 ```Java
 public class MyClass{
@@ -80,13 +79,13 @@ public class MyClass{
 **This will COMPILE**
 
 - But why ?
-Because the class **Cat** is extending the "super-class" **Feline**, therefore Cat is just a sub set of Feline (a child of feline). BUT what we CANNOT do is call the Cat's methods we are only able to call the Feline methods instead, foe example this following snipped will not compile.
+Because the class **Cat** is extending the "super-class" **Feline**, therefore Cat is just a sub set of Feline (a child of feline). BUT what we CANNOT do is call all the Cat's methods, we are only able to call the Feline methods instead, for example this following snipped will not compile.
 
 ```Java
 myCat.eat();
 ```
 
-This is because we assigned Feline as the reference value for the Cat. So we can only control what a Feline does NOT what a Cat does.
+This is because we assigned **Feline** as the reference value for the **Cat**. So we can only control what a Feline does NOT what a Cat does.
 
 **NOTE:** You can use this property not only for assignation but also for parameters and returns;
 
@@ -98,6 +97,14 @@ This is because we assigned Feline as the reference value for the Cat. So we can
 
 # The notion of the "Class Object"
 
-If we think about the idea of abstraction itself you can keep inherit more and more abstract classes until you get the "mother" of all classes, the **Object** class. This Super-class is part of the package java.lang (The default package library from Java that allows you to call the System class as well)
+If we think about the idea of abstraction itself you can keep inheriting more and more abstract classes until you get the "mother" of all classes, the **Object** class. This Super-class is part of the java.lang package and is the one that provides all classes in Java their basic "class functionality" for example the **.equals** keyword.
 
-In short every single class you write in Java, is extending the **Object** class.
+In fact you could write **extends object** aftern any calss you write and this will work.
+
+```Java
+class myClass extends Object{
+  // ...
+}
+```
+
+In short every single class you write in Java, is extending the **Object** class by default.

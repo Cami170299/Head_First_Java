@@ -1,8 +1,10 @@
 public class Assignation {
   public static void main(String[] args) {
     Feline mycat = new Cat();
-    mycat.drink("");
-    mycat.eat("");
+    mycat.drink("milk");
+    // This will not compile as we assigned "Feline" to out Cat instance. So we can
+    // only do what a Felina does not what a Cat does.
+    // mycat.eat("Tuna");
   }
 }
 
@@ -11,7 +13,7 @@ class Feline {
     if (liquid != "") {
       System.out.println("Dringking " + liquid);
     } else {
-      System.out.println("Drinking");
+      System.out.println("Drinking something");
     }
   }
 }
