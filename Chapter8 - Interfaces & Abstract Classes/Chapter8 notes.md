@@ -95,3 +95,9 @@ This is because we assigned Feline as the reference value for the Cat. So we can
     a.makeNoise();
   }
 ```
+
+# The notion of the "Class Object"
+
+If we think about the idea of abstraction itself you can keep inherit more and more abstract classes until you get the "mother" of all classes, the **Object** class. This Super-class is part of the package java.lang (The default package library from Java that allows you to call the System class as well)
+
+In short every single class you write in Java, is extending the **Object** class.

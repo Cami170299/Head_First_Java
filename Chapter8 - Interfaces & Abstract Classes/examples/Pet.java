@@ -22,3 +22,7 @@ abstract class Canine extends Animal {
 
   }
 }
+
+class myClass extends Object {
+
+}
